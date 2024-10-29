@@ -25,19 +25,19 @@ export default function HorizontalModal() {
 
     return (
 
-        <div className="horizontal-modal">
+        <div className="horizontalModal">
             <span><b>{isMobile ? "Next Cohorts" : "Check Out Schedules for Future Dates"}:</b></span>
 
-            <div className="horizontal-modal-container">
-                {/* <div className="cohort-1">
-                    <div className="cohort-paragraphs">
+            <div className="horizontalModal-container">
+                {/* <div className="horizontal-cohort-1">
+                    <div className="horizontal-cohort-paragraphs">
                         <p><b>
                         {COHORT_DATE_RANGE_OCTOBER[0].start} - {COHORT_DATE_RANGE_OCTOBER[0].end}
                         </b></p>
                         <Link to="/octoberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">
-                        <Link to="/october" className="horizontal-modal-button-link">Join Cohort</Link>
+                        <Link to="/october" className="modal-button-link">Join Cohort</Link>
                     </button>
                 </div> */}
 
@@ -49,7 +49,7 @@ export default function HorizontalModal() {
                         <Link to="/novemberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">
-                        <Link to="/november" className="horizontal-modal-button-link">Join Cohort</Link>
+                        <Link to="/november" className="modal-button-link">Join Cohort</Link>
                     </button>
                 </div>
 
@@ -61,7 +61,7 @@ export default function HorizontalModal() {
                         <Link to="/decemberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">
-                        <Link to="/december" className="horizontal-modal-button-link">Join Cohort</Link>
+                        <Link to="/december" className="modal-button-link">Join Cohort</Link>
                     </button>
                 </div>
 
