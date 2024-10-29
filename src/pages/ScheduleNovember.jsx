@@ -20,6 +20,10 @@ export default function ScheduleNovember() {
                 <h1>Join November Cohort</h1>
             </GreenArticle >
             < CalendarNov />
+            <Article>  <p>You must watch the lecture before that day’s Live Coaching session. However, if you’re the type of person who likes to be super prepared, you can watch the recording on your own time before this session. You’ll have access to all the recordings before the course begins, so you can even binge-watch them.</p>
+                <p>All times listed are in Eastern Time Zone.</p>
+                <p>We welcome folks from other time zones to join us. </p></Article>
+            < Footer />
             < Footer />
         </div >
 

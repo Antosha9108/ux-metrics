@@ -1,6 +1,9 @@
 import React from "react"
 import "./Modal.css"
 import { Link } from "react-router-dom"
+import { COHORT_DATE_RANGE_OCTOBER } from '../Calendar/CalendarData'
+import { COHORT_DATE_RANGE_NOVEMBER } from '../Calendar/CalendarData'
+import { COHORT_DATE_RANGE_DECEMBER } from '../Calendar/CalendarData'
 
 export default function Modal() {
     return (
@@ -17,7 +20,7 @@ export default function Modal() {
             <div>
                 <div className="cohort-1">
                     <div className="cohort-paragraphs">
-                        <p><b>Nov 5 - Dec 3</b></p>
+                        <p><b>{COHORT_DATE_RANGE_OCTOBER[0].start} - {COHORT_DATE_RANGE_OCTOBER[0].end}</b></p>
                         <Link to="/octoberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">  <Link to="/october" className="modal-button-link">Join Cohort</Link></button>
@@ -25,14 +28,14 @@ export default function Modal() {
                 </div>
                 <div className="cohort-1">
                     <div className="cohort-paragraphs">
-                        <p> <b>Nov 18 - Dec 19</b></p>
+                    <p> <b>{COHORT_DATE_RANGE_NOVEMBER[0].start} - {COHORT_DATE_RANGE_NOVEMBER[0].end}</b></p>
                         <Link to="/novemberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">  <Link to="/november" className="modal-button-link">Join Cohort</Link></button>
                 </div>
                 <div className="cohort-1">
                     <div className="cohort-paragraphs">
-                        <p><b>Dec 10 - Jan 17</b></p>
+                    <p><b>{COHORT_DATE_RANGE_DECEMBER[0].start} - {COHORT_DATE_RANGE_DECEMBER[0].end}</b></p>
                         <Link to="/decemberschedule">See Schedule</Link>
                     </div>
                     <button className="btn-shadow">  <Link to="/december" className="modal-button-link">Join Cohort</Link></button>

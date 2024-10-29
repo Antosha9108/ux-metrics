@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Calendar.css';
+import { useLocation } from 'react-router-dom';
 import { HARDCORE_DETAILS_OCTOBER } from './CalendarData'
 import { COHORT_DATE_RANGE_OCTOBER } from './CalendarData'
 import playButton1 from './playButton1.png'
@@ -7,7 +8,7 @@ import playButton2 from './playButton2.png'
 
 export default function Calendar() {
     const [expandedSections, setExpandedSections] = useState({});
-
+    const location = useLocation();
     const toggleDetails = (index) => {
         setExpandedSections(prevState => ({
             ...prevState,
@@ -15,8 +16,14 @@ export default function Calendar() {
         }));
     };
 
+    // Conditionally add the class 'inactive' when on the home page ("/")
+    const containerClass = location.pathname !== '/' ? 'calendar-container' : '';
+
+
+
     return (
-        <div className="calendar-container">
+        // containerClass here is a CSS class that toggles off on the home page.
+        <div className={containerClass}>
             <div className='calendar'>
                 <h2>Cohort: {COHORT_DATE_RANGE_OCTOBER[0].start} - {COHORT_DATE_RANGE_OCTOBER[0].end}</h2>
                 <h3>UPDATE New Start Date For Cohort Previously Starting Oct 29.</h3>

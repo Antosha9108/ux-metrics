@@ -25,23 +25,11 @@
     margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .headerTitle {
     display: flex;
     align-items: center;
     border-radius: 10px;
-    background-color: white;  
+    background-color: white;
     padding-left: 10px;
     /* font-size: 17px; */
     padding: 0.5em 0;
@@ -60,7 +48,8 @@
 }
 
 .scheduleIconImg.rotated {
-    transform: rotate(90deg); /* 90-degree rotation */
+    transform: rotate(90deg);
+    /* 90-degree rotation */
 }
 
 
@@ -76,12 +65,13 @@
 }
 
 
-    
-.subTitle, .topicDetails {
+
+.subTitle,
+.topicDetails {
     padding: 15px 30px 15px;
     display: flex;
     border-radius: 10px;
-    background-color: white;  
+    background-color: white;
     /* font-weight: 700; */
     margin-bottom: 7px;
 }
@@ -91,7 +81,7 @@
     display: flex;
     flex-direction: column;
     padding: 15px 30px 25px;
-    
+
 }
 
 
@@ -100,15 +90,6 @@
     display: flex;
     align-items: center;
 }
-
-
-
-
-
-
-
-
-
 
 .optionDate {
     font-weight: 500;
@@ -119,16 +100,17 @@
     font-weight: 700;
 }
 
-.topicDetails > ul, .topicDetails > li{
+.topicDetails>ul,
+.topicDetails>li {
     line-height: 25px;
 }
 
-.topicDetails > ul {
+.topicDetails>ul {
     padding-left: 10px;
     margin: 0.5rem;
-} 
+}
 
-.topicDetails > li {
+.topicDetails>li {
     padding-left: 4em;
     text-indent: -1.5em;
     list-style-position: outside;
@@ -144,10 +126,13 @@
 
 
 @media only screen and (max-width: 768px) {
+
     /* Adjust the width for mobile devices */
-    .courseSchedule p, li, h2 {
+    .courseSchedule p,
+    li,
+    h2 {
         max-width: 100%;
-    }    
+    }
 
     .calendar {
         display: flex;
@@ -170,21 +155,23 @@
         transition: transform 0.3s ease;
     }
 
-    .headerTitle{
+    .headerTitle {
         /* flex-direction: column; */
         /* align-items: left; */
         font-size: 14px;
         line-height: 1.2rem;
     }
 
-    #optionalTitle, #liveTopicTitle {
+    #optionalTitle,
+    #liveTopicTitle {
         display: flex;
         flex-direction: column;
         align-items: left;
         padding-left: 2.5em
     }
 
-    .optionDate, .optionTitle {
+    .optionDate,
+    .optionTitle {
         font-size: 14px;
         line-height: 1.2rem;
         padding-right: 0;
@@ -202,12 +189,12 @@
         padding: 0 .75em .75em .75em;
     }
 
-    .topicDetails > ul {
+    .topicDetails>ul {
         padding: 0;
         font-size: 15px;
     }
 
-    .topicDetails > li {
+    .topicDetails>li {
         padding-left: 2em;
         font-size: 15px;
     }

@@ -40,6 +40,7 @@
     /* Adjust the width for mobile devices */
     .GreenArticle-content p {
         max-width: 100%;
+        font-size: 15px;
     }
 
     .GreenArticle-content h1 {

@@ -12,3 +12,20 @@
     color: white;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .purchase-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        /* border: 1px solid red; */
+    }
+
+    .purchase-box img {
+        /* border: 1px solid red; */
+        width: 80%;
+    }
+
+}

@@ -8,7 +8,7 @@ export function Hero() {
             <img src="/images/Jared_Spool 2.png" alt="Jared" />
             <div className="hero-paragraphs">
                 <p>Small Group Coaching</p>
-                <p>8 Hours Live with Jared Spool <br />8 hours of Recorded Content</p>
+                <p>8 Hours Live with Jared Spool <br />8 Hours of Recorded Content</p>
             </div>
         </div>
     )
@@ -16,7 +16,6 @@ export function Hero() {
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
-    const location = useLocation();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen); // Toggle the menu state
@@ -51,7 +50,7 @@ export default function Header() {
                     <p className="online-course">An Online Course with Jared Spool</p>
                     <Hero />
                 </div>
-                {/* {location.pathname === '/' && <Hero />} */}
+
             </section>
         </section>
     );

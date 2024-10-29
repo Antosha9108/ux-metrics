@@ -11,8 +11,8 @@ export default function PurchaseBox({ src, text, buttonText }) {
             <p><b>{text}</b></p>
             <button className="btn-shadow btn purchase-box-button"><a className="purchase-box-button-white" href="https://essentials.centercentre.com/metrics">{buttonText}</a></button>
 
-        </div>
 
+        </div>
 
     )
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Calendar.css';
+import { useLocation } from 'react-router-dom';
 import { HARDCORE_DETAILS_NOVEMBER } from './CalendarData'
 import { COHORT_DATE_RANGE_NOVEMBER } from './CalendarData'
 import playButton1 from './playButton1.png'
@@ -7,6 +8,8 @@ import playButton2 from './playButton2.png'
 
 export default function Calendar() {
     const [expandedSections, setExpandedSections] = useState({});
+    const location = useLocation();  // Get the current path
+
 
     const toggleDetails = (index) => {
         setExpandedSections(prevState => ({
@@ -15,8 +18,12 @@ export default function Calendar() {
         }));
     };
 
+
+    // Conditionally add the class 'inactive' when on the home page ("/")
+    const containerClass = location.pathname !== '/' ? 'calendar-container' : '';
+
     return (
-        <div className="calendar-container">
+        <div className={containerClass}>
             <div className='calendar'>
                 <h2>Cohort: {COHORT_DATE_RANGE_NOVEMBER[0].start} - {COHORT_DATE_RANGE_NOVEMBER[0].end}</h2>
                 {HARDCORE_DETAILS_NOVEMBER.map((classInfo, index) => {

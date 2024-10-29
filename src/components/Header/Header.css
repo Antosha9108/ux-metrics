@@ -151,3 +151,12 @@ h1 {
   font-size: 1.5em;
   margin-top: 0;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  /* Adjust the width for mobile devices */
+  .hero-paragraphs p {
+    font-size: 15px
+  }
+}

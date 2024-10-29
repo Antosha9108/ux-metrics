@@ -1,28 +1,44 @@
 import React from "react";
+import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 
 // components
 import Header from "../components/Header/Header";
 import GreenArticle from "../components/GreenArticle/GreenArticle";
-import Article from "../components/Article/Article";
 import LeftContent from "../components/LeftContent/LeftContent";
 import RightContent from "../components/RightContent/RightContent";
 import Modal from "../components/Modal/Modal";
 import TestComponent from "../components/TestComponent/TestComponent";
 
-
-
 import Footer from "../components/Footer/Footer";
-import Pricing from "../components/Pricing/Pricing";
-import { Link } from "react-router-dom";
-
 
 export default function Outcomes() {
+
+
+    // State and hooks to change the h1 on resize
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    // Update the state on window resize
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup the listener on component unmount
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+
+
+
     return (
         <div className="outcomes">
             <Header />
             < GreenArticle >
-                <h1>Why use Outcome-driven UX Metrics?</h1>
+                <h1>{isMobile ? "Why UX Outcomes?" : "Why use Outcome-driven UX Metrics?"}</h1>
             </GreenArticle >
             <TestComponent >
                 <div>
@@ -30,12 +46,25 @@ export default function Outcomes() {
                     <p>Great metrics describe how you and your team are increasing the value of your products and services for customers, helping your business achieve its top priorities, and making the world better in the process.</p>
                     <p>For UX work, you want metrics showing how a great user experience has increased the value your customers and users receive. You want to show how investing in great UX has paid off by hitting business targets with great returns. And you want your metrics to describe how you’re improving the lives of your customers and users.
                     </p>
+                    <h2>Not every metric helps you. Some even harm your efforts.
+                    </h2>
+                    <p>Unfortunately, you can’t do that with just any metric. The metrics that UX folk commonly use generally don’t tell attention-grabbing stories.
+                    </p>
+
+                    <p>Metrics like the time an average user spends on a page, click-through rates, bounce rates, or even conversion rates only indicate what someone did, not whether they had a great experience while doing it. For example, you don’t know if a longer time on a page helped the customer understand your offerings or if the page was confusing and difficult to navigate. Both would take longer and make for an unclear metric without a good story.
+                    </p>
+
+                    <p>Measurements of how users feel about you, like their satisfaction (C-SAT), their loyalty (Net Promoter Score), or their assessment of the design’s usability (System Usability Score), don’t tell you anything about the experience your users are having. Their lack of definition can’t separate a poor experience from a bad day with nothing to do with you. And they don’t guide you on what to do differently in your design.
+                    </p>
+
+                    <p>UX folks pick these metrics not because they’re effective at telling a compelling story but because they are easy to generate data for. Unfortunately, these metrics don’t help you make your case about your UX efforts’ significant contributions to your organization’s success.
+                    </p>
                 </div>
                 <div>
                     <Modal />
                 </div>
             </TestComponent >
-            <LeftContent>
+            {/* <LeftContent>
 
                 <div className="">
                     <h2>Not every metric helps you. Some even harm your efforts.
@@ -56,12 +85,12 @@ export default function Outcomes() {
                 <div>
                     <img src="/images/goals.png" alt="Jared" className="left-content-image" />
                 </div>
-            </LeftContent>
+            </LeftContent> */}
 
 
             <RightContent>
                 <div>
-                    <img src="/images/stopwatch.png" alt="Jared" className="left-content-image" />
+                    <img src="/images/goals.png" alt="Jared" className="left-content-image" />
                 </div>
                 <div className="">
                     <h2>Outcome-driven UX Metrics focus on the users’ experience.</h2>
@@ -85,12 +114,13 @@ export default function Outcomes() {
                     <p>If you want everyone in your organization to see the benefit of investing in great UX, you need outcome-driven UX metrics to tell your story.
                     </p>
 
+                    <Link to="/topics">Check out everything you’ll learn in this course.</Link>
                 </div>
             </RightContent>
 
 
             {/* MIGHT NEED TO SWITCH TO PRICING COMPONENT */}
-            <TestComponent>
+            {/* <TestComponent>
                 <div>
                     <div className="">
                         <h2>Are you measuring the UX improvements you’re delivering?</h2>
@@ -103,7 +133,7 @@ export default function Outcomes() {
                     </div>
                 </div>
                 <Modal />
-            </TestComponent >
+            </TestComponent > */}
 
 
 

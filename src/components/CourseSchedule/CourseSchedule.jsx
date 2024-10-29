@@ -29,6 +29,7 @@ export default function CourseSchedule() {
                 You’ll have access to the recordings for 8 weeks.</span> */}
             <h1>Course Schedule</h1>
             <Calendar />
+
         </section>
 
     )
