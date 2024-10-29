@@ -10,6 +10,7 @@ import Footer from '../components/Footer/Footer';
 import Modal from "../components/Modal/Modal";
 import TestComponent from "../components/TestComponent/TestComponent";
 import PurchaseBox from "../components/PurchaseBox/PurchaseBox";
+import HorizontalModal from '../components/HorizontalModal/HorizontalModal';
 
 
 export default function Home() {
@@ -75,6 +76,7 @@ export default function Home() {
                 <span><b>- UX Researcher and Designer </b></span>
             </Testimonials>
             <CourseSchedule />
+            <HorizontalModal />
             <JaredSpool />
 
             <TestComponent>
